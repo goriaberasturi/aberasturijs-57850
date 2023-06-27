@@ -56,4 +56,4 @@ do {
 
     } 
 
-} while(respuesta != "si")
+} while(respuesta.toLowerCase() != "si")
