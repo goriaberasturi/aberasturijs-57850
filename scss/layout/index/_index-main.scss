@@ -1,0 +1,150 @@
+.index-main {
+    .section1 {
+        @include flex(column, nowrap, none, center);
+        width: 100%;
+        margin: 25px 0px;
+        padding: 25px;
+        background-color: #f0fdf6;
+
+        article {
+            @include flex(row, nowrap, space-between, center);
+            position: relative;
+            width: 80%;
+            height: 500px;
+
+            %artTxth2ph {
+                font-weight: 600;
+                color: white;
+            }
+
+            .artTxt1 {
+                @include section1-Txt;
+                left: 0;
+
+                div {
+                    @include section1-Txt-div;
+
+                    h2 {
+                        @extend %artTxth2ph;
+                    }
+                }
+
+                p {
+                    padding: 15px;
+                }
+
+                .cardButton {
+                    @include card-Btn;
+                }
+            }
+
+            .artTxt2 {
+                @include section1-Txt;
+                right: 0;
+
+                div {
+                    @include section1-Txt-div;
+
+                    h2 {
+                        @extend %artTxth2ph;
+                    }
+                }
+
+                p {
+                    padding: 15px;
+                }
+
+                .cardButton {
+                    @include card-Btn;
+                }
+            }
+
+            .artImg1 {
+                @include section1-Img;
+                right: 0;
+                background-image: url("../assets/images/catalogo_hacienda.jpg");
+            }
+
+            .artImg2 {
+                @include section1-Img;
+                left: 0;
+                background-image: url("../assets/images/proximos_remates.jpg");
+            }
+        }
+    }
+
+    .section2 {
+        @include flex(row, nowrap, center, none);
+        width: 100%;
+        margin: 60px 0px;
+
+        article {
+            @include flex(row, wrap, space-evenly, none);
+            width: 70%;
+
+            a {
+                max-width: 300px;
+                margin: 20px;
+
+                .selfcard {
+                    @include flex(column, nowrap, none, none);
+                    max-width: 300px;
+                    height: 400px;
+                    border-radius: 4px;
+                    box-shadow: 0px 0px 4px black;
+                    transition: all 160ms ease-in-out;
+                    overflow: hidden;
+
+                    &:hover {
+                        transform: scale(1.05, 1.05);
+                    }
+
+                    .cardImg {
+                        width: 100%;
+                        height: 60%;
+                        background-size: cover;
+                        background-position: left top;
+                    }
+
+                    .cardTxt {
+                        width: 100%;
+                        height: 40%;
+                        padding: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section3 {
+        @include flex(row, nowrap, center, none);
+        margin: 40px 0px;
+        gap: 30px;
+
+        article {
+            @include flex(row, nowrap, none, center);
+            width: 80%;
+            margin: 40px;
+            align-items: center;
+            gap: 50px 100px;
+
+            img {
+                max-width: 100%;
+                max-height: 400px;
+                border-radius: 5px;
+            }
+
+            div {
+                display: grid;
+                gap: 30px;
+
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

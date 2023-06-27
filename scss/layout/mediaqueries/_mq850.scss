@@ -1,0 +1,36 @@
+@media (max-width: 850px) {
+    
+    /* Clases cereales.html */
+
+    .cereales-main {        
+        .cereales_div {
+            width: 400px;
+            height: 512px;
+        }
+        
+        .cereales_div_form {
+            height: 650px;
+
+            form {
+                width: 80%;
+            }
+        }
+    }
+
+    /* Clases nosotros.html */
+
+    .nosotros-main {
+        .secHist {
+            @include flex(column, nowrap, none, center);
+    
+            .historiaNos {
+                @include grid(repeat(2, auto) / 1fr, center, center);
+
+                img {
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+        }
+    }
+}

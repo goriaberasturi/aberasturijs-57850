@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="hacienda, cereales, consignataria, inversiones, vacas, ganado">
+    <meta name="description" content="Ofrezca sus cereales y consulte el valor de las divisas actualizadas cada instante.">
+    <title>Cereales | Gregorio Aberasturi SRL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/images/favicon.png">
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html"><img src="../assets/images/logo.png" alt="Logo"></a>
+        <ul class="navLinks">
+            <li><a href="../index.html"">Home</a></li>
+            <li><a href="https://www.mercadoagroganadero.com.ar/dll/inicio.dll" target="_blank">MAG</a></li>
+            <li><a href="catalogoRemate.html" class="navbarLink">Remate</a></li>
+            <li><a href="cereales.html" class="navbarLink active">Cereales</a></li>
+            <li><a href="nosotros.html" class="navbarLink">Nosotros</a></li>
+        </ul>
+        <a href="login.html" class="navbarLink"><button>Ingresar</button></a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <div class="dropdown_menu">
+            <li><a href="../index.html"">Home</a></li>
+            <li><a href="https://www.mercadoagroganadero.com.ar/dll/inicio.dll" target="_blank">MAG</a></li>
+            <li><a href="catalogoRemate.html" class="navbarLink">Remate</a></li>
+            <li><a href="cereales.html" class="navbarLink">Cereales</a></li>
+            <li><a href="nosotros.html" class="navbarLink">Nosotros</a></li>
+            <a href="login.html" class="navbarLink navlog"><button>Ingresar</button></a>
+        </div>
+    </nav>
+    <main class="cereales-main">
+            <div class="cereales_div_h1">
+                <h1>Cotizaciones</h1>
+            </div>
+            <div class="cotizaciones">
+                <iframe style="height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc"src="https://dolarhoy.com/i/cotizaciones/dolar-bancos-y-casas-de-cambio" frameborder="0"></iframe>
+                <iframe style="height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://dolarhoy.com/i/cotizaciones/dolar-blue" frameborder="0"></iframe>
+                <iframe style="height:260px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://dolarhoy.com/i/cotizaciones/dolar-mep" frameborder="0"></iframe>
+            </div>
+            <div class="cereales_div">
+                <div>
+                    <h2>Punto de entrega</h2>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2732.3836564925255!2d-63.248940013224306!3d-37.455514360171414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95e9a1fc01f2ebbb%3A0xcf98fad874cd89e4!2sUNIGRAN%20S.A.!5e1!3m2!1ses-419!2sar!4v1680732984031!5m2!1ses-419!2sar"
+                    width="90%" height="90%" style="border:0;border-radius: 4px;align-self: center;justify-self: center; max-width: 450px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="cereales_div cereales_div_form">
+                <div>
+                    <h2>Ofrece tus cereales</h2>
+                </div>
+                <form action="cereales.php" style="align-self: center;justify-self: center;height: fit-content;">
+                    <label for="">Cereal</label><input type="text">
+                    <label for="">Toneladas</label><input type="number">
+                    <label for="">Nombre</label><input type="text">
+                    <label for="">Telefono</label><input type="number">
+                    <label for="">E-mail</label><input type="email">
+                    <label for="">Mensaje</label><textarea name="comentarios" id="" cols="30" rows="10" style="resize: none;"></textarea>
+                </form>
+            </div> 
+    </main>
+    <footer>
+        <div class="informacion">
+            <ul>
+                <li>Moreno 1141, Carhue, Buenas Aires</li>
+                <li>(02936) 43-2676</li>
+                <li>info@gregorioaberasturi.com.ar</li>
+            </ul>
+        </div>
+        <div class="redes">
+            <div class="facebook">
+                <a href="https://www.facebook.com/gregorio.aberasturisrl" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook Logo">Facebook</a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/gregorioaberasturisrl/" target="_blank"><img src="../assets/images/instagram.png" alt="Instagram Logo">Instagram</a>
+            </div>
+        </div>
+        <img src="../assets/images/logo.png" alt="Logo">
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+@media (max-width: 562px) {
+
+    /* Nav */
+
+    nav {
+        padding:5px 15px;
+
+        .dropdown_menu {
+            left: 2rem;
+            width: unset;
+        }
+    }
+
+    /* Clases index.html */
+
+    /* Header */
+
+    .index-header {
+        .h1bg {
+            h1 {
+                font-size: 26px;
+            }
+
+            span {
+                font-size: 17px;
+            }
+        }
+    }
+
+    /* Main */
+
+    /* Section 2 */
+
+    .index-main {
+        .section2 {
+            .article1 {
+                .cardLink {
+                    width: 250px;
+                    height: 333px;
+                    
+                    .selfcard {
+                        width: 250px;
+                        height: 333px;
+                        
+                        .cardTxt {
+                            h3 {
+                                font-size: 16px;
+                            }
+                            
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .section3 {
+            .historia {
+                .historiaTxt {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    /* Clases cereales.html */
+
+    .cereales-main {
+        .cereales_div {
+            width: 300px;
+            height: 384px;
+        }
+        
+        .cereales_div_form {
+            height: 650px;
+        }
+    }
+}
