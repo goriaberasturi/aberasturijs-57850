@@ -1,59 +1,83 @@
-let numero;
+const calculos = ['Sumar', 'Restar', 'Multiplicar', 'Dividir'];
+let calcEntry;
+let num1;
+let num2;
+let resultado;
 
-do {
-    numero = Number(prompt("Tengo los ojos tapados. Elija un numero entero entre 1 y 3\nElija bien, porque voy a adivinarlo!"));
+function sumar(x, y) {
+    return x + y;
+}
 
-    if(isNaN(numero)) {
-        alert("Ha introducido una letra o texto\nPor favor introduzca un caracter valido");
+function restar(x, y) {
+    return x - y;
+}
 
-    } else if(!Number.isInteger(numero)) {
-        alert("Ha introducido un numero no entero\nPor favor introduzca un caracter valido");
+function multiplicar(x, y) {
+    return x * y;
+}
 
-    } else if(numero < 1 || numero > 3) {
-        alert("Ha introducido un numero que no cumple los requisitos\nPor favor introduzca un caracter valido");
+function dividir(x, y) {
+    return x / y;
+}
 
-    }
+function preguntaOp() {
+    alert('Usted selecciono la opcion: ' + calculos[calcEntry]);
 
-} while(numero != 1 && numero != 2 && numero != 3);
+    do {
+        num1 = Number(prompt('Introduzca el primer numero:'));
+    } while (isNaN(num1));
 
-alert("Mis ojos estan destapados y ya puedo leerte la mente")
+    do {
+        num2 = Number(prompt('Introduzca el segundo numero:'));
+    } while (isNaN(num2));
 
-let respuesta;
-do {
-    respuesta = prompt("Su numero es el 1? Escriba si o no");
-
-    if(respuesta.toLowerCase() == "si") {
-        alert("A la primera! Muy facil...");
-
-    } else if(respuesta.toLowerCase() == "no"){
-        respuesta = prompt("Su numero es el 2? Escriba si o no");
-        
-        if(respuesta.toLowerCase() == "si") {
-            alert("A la segunda... Estuvo facil");
-            
-        } else if(respuesta.toLowerCase() == "no") {
-            respuesta = prompt("Lo tengo! Es el 3");
-            
-            if(respuesta == "si") {
-                alert("Siempre gano!");
-
-            } else if(respuesta == "no") {
-                alert("Felicitaciones! Es usted un tramposo!");
-
-
-            } else {
-                alert("Su respuesta no es valida");
-
-            }
-            
-        } else {
-            alert("Su respuesta no es valida");
-
-        }
-
+    if (calcEntry == 0 || calcEntry == 1) {
+        alert(`A continuacion, el resultado de ${calculos[calcEntry].toLocaleLowerCase()} ${num1} y ${num2}`);
     } else {
-        alert("Su respuesta no es valida");
+        alert(`A continuacion, el resultado de ${calculos[calcEntry].toLocaleLowerCase()} ${num1} por ${num2}`);
+    }
+}
 
-    } 
+do {
+    calcEntry = Number(prompt('Elija un calculo a realizar:' +
+                            '\n[0] - ' + calculos[0] +
+                            '\n[1] - ' + calculos[1] +
+                            '\n[2] - ' + calculos[2] +
+                            '\n[3] - ' + calculos[3]
+                            )
+    );
 
-} while(respuesta.toLowerCase() != "si")
+    if (calcEntry != 0 && calcEntry != 1 && calcEntry != 2 && calcEntry != 3) {
+        alert('La opcion seleccionada no existe');
+    }
+} while (calcEntry != 0 && calcEntry != 1 && calcEntry != 2 && calcEntry != 3);
+
+switch (calcEntry) {
+
+    case 0:
+        preguntaOp();
+        alert(`El resultado es:   ${num1 + num2}`);
+        break;
+
+    case 1:
+        preguntaOp();
+        alert(`El resultado es:   ${num1 - num2}`);
+        break;
+
+    case 2:
+        preguntaOp();
+        alert(`El resultado es:   ${num1 * num2}`);
+        break;
+
+    case 3:
+        preguntaOp();
+        if(num2 == 0) {
+            alert(`Error: se intento dividir por 0!`);
+        } else {
+            alert(`El resultado es:   ${num1 / num2}`);
+        }
+        break;
+
+    default:
+        alert('La opcion seleccionada no existe');
+}
