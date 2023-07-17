@@ -109,7 +109,7 @@ do {
             alert('El resultado de iterar este rango es: ' + numeros.itSuma());
             break;
     }
-    
+    resultado = 0;
     respuesta = confirm('Desea continuar con otro calculo?');
 } while(respuesta);
 
