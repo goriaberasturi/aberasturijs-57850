@@ -1,11 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <meta name="keywords" content="hacienda, cereales, consignataria, inversiones, vacas, ganado">
+    <meta name="description" content="Acceda a nuestro catalogo de hacienda disponible para nuestro proximo remate feria.">
+    <title>Remate | Gregorio Aberasturi SRL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../assets/images/favicon.png">
+    <style>
+        .catalogo {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .article2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            height: 40px;
+            margin: 20px 0;
+            background-color: green;
+            border-radius: 5px;
+        }
+
+        .article2 h1 {
+            font-size: 20px;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <script src="js/simulador.js"></script>
+    <nav>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+        <ul class="navLinks">
+            <li><a href="index.html"">Home</a></li>
+            <li><a href="https://www.mercadoagroganadero.com.ar/dll/inicio.dll" target="_blank">MAG</a></li>
+            <li><a href="catalogoRemate.html" class="navbarLink active">Remate</a></li>
+            <li><a href="cereales.html" class="navbarLink">Cereales</a></li>
+            <li><a href="nosotros.html" class="navbarLink">Nosotros</a></li>
+        </ul>
+        <a href="login.html" class="navbarLink"><button>Ingresar</button></a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <div class="dropdown_menu">
+            <li><a href="index.html"">Home</a></li>
+            <li><a href="https://www.mercadoagroganadero.com.ar/dll/inicio.dll" target="_blank">MAG</a></li>
+            <li><a href="catalogoRemate.html" class="navbarLink">Remate</a></li>
+            <li><a href="cereales.html" class="navbarLink">Cereales</a></li>
+            <li><a href="nosotros.html" class="navbarLink">Nosotros</a></li>
+            <a href="login.html" class="navbarLink navlog"><button>Ingresar</button></a>
+        </div>
+    </nav>
+    <header>
+    </header>
+    <main class="catalogoRemate-main">
+        <section class="catalogo">
+            <article class="article1">
+                <a class="cardLink" href="login.html">
+                    <div class="selfcard">
+                        <div class="cardImg l1"></div>
+                        <div class="cardTxt">
+                            <h3 class="card-title">Lote 1</h3>
+                            <p class="card-text">140 Terneros/Terneras Angus 200kg</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a class="cardLink" href="login.html">
+                    <div class="selfcard">
+                        <div class="cardImg l2"></div>
+                        <div class="cardTxt">                            
+                            <h3 class="card-title">Lote 2</h3>
+                            <p class="card-text">12 Terneros Angus 170kg</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a class="cardLink" href="login.html">
+                    <div class="selfcard">
+                        <div class="cardImg l3"></div>
+                        <div class="cardTxt">                            
+                            <h3 class="card-title">Lote 3</h3>
+                            <p class="card-text">120 Terneros Holando 225kg</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a class="cardLink" href="login.html">
+                    <div class="selfcard">
+                        <div class="cardImg l4"></div>
+                        <div class="cardTxt">                            
+                            <h3 class="card-title">Lote 4</h3>
+                            <p class="card-text">8 Terneros Angus 280kg</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a class="cardLink" href="login.html">
+                    <div class="selfcard">
+                        <div class="cardImg l5"></div>
+                        <div class="cardTxt">                            
+                            <h3 class="card-title">Lote 5</h3>
+                            <p class="card-text">250 Vaquillonas Angus 255kg</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a class="cardLink" href="login.html">
+                    <div class="selfcard">
+                        <div class="cardImg l6"></div>
+                        <div class="cardTxt">                            
+                            <h3 class="card-title">Lote 6</h3>
+                            <p class="card-text">65 Terneros Angus 210kg</p>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="article2">
+                <h1>Carrito de compras</h1>
+            </article>
+        </section>
+    </main>
+    <footer class="bg-secondary row">
+        <div class="informacion col">
+            <ul>
+                <li>Moreno 1141, Carhue, Buenas Aires</li>
+                <li>(02936) 43-2676</li>
+                <li>info@gregorioaberasturi.com.ar</li>
+            </ul>
+        </div>
+        <div class="redes col">
+            <div class="facebook">
+                <a href="https://www.facebook.com/gregorio.aberasturisrl" target="_blank"><img src="assets/images/facebook.png" alt="Facebook Logo">Facebook</a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/gregorioaberasturisrl/" target="_blank"><img src="assets/images/instagram.png" alt="Instagram Logo">Instagram</a>
+            </div>
+        </div>
+        <div class="footerLogo col">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
+    </footer>
+    
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>
