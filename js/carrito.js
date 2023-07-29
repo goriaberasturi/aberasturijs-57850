@@ -1,7 +1,6 @@
 let lotes = [];
 let carrito = [];
 let cardLinks = document.querySelectorAll('.cardLink');
-let clon;
 
 const container = document.querySelector('#container');
 const message = document.querySelector('.article2 h2');
@@ -10,7 +9,16 @@ document.querySelector('#updateBtn').onclick = () => {actualizar()};
 function confirmar(lote) {
     respuesta = confirm(`Desea agregar el lote ${lote} al carrito`);
 
-    respuesta && (carrito.indexOf(lote) != -1 ? alert('El lote ya se encuentra en el carrito!') :  carrito.push(lote));
+    if(respuesta) {
+        if(carrito.indexOf(lote) != -1) {
+            alert('El lote ya se encuentra en el carrito!');
+        } else {
+            carrito.push(lote);
+            let nodo = document.getElementsByClassName(`.cardLink  ${lote}`);
+            let clon = nodo.cloneNode(true);
+            container.appendChild(clon);
+        }
+    }
     console.log(carrito);
 }
 
