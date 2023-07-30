@@ -42,7 +42,7 @@ let container = document.querySelector('#container');
 document.querySelector('#updateBtn').addEventListener('click', function actualizar() {
     if(cart.length != 0) {
         message.style.display = 'none';
-        container.style.display = 'inline-block'
+        container.style.display = 'grid'
         container.innerHTML = '';
         console.log(1);
         for(product of cart) {
