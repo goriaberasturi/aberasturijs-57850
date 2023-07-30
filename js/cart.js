@@ -51,6 +51,12 @@ document.querySelector('#updateBtn').addEventListener('click', function actualiz
     }
 });
 
+document.querySelector('#clearBtn').addEventListener('click', function limpiar() {
+    cart = [];
+    container.innerHTML = '';
+    message.style.display = 'block'
+});
+
 for(let i = 0; i < catalogo.length; i++) {
     document.querySelector(`#l${i + 1}`).onclick = () => agregar(i);
 
