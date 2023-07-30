@@ -14,9 +14,6 @@ function confirmar(lote) {
             alert('El lote ya se encuentra en el carrito!');
         } else {
             carrito.push(lote);
-            let nodo = document.getElementsByClassName(`.cardLink  ${lote}`);
-            let clon = nodo.cloneNode(true);
-            container.appendChild(clon);
         }
     }
     console.log(carrito);

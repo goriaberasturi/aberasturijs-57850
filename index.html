@@ -19,7 +19,7 @@
             flex-direction: column;
             align-items: center;
         }
-        
+
         .article2 {
             display: flex;
             width: 70%;
@@ -29,7 +29,7 @@
             min-height: 330px;
         }
 
-        .article2 h2 {
+        .article2 p {
             font-weight: 600;
             color: rgb(179, 179, 179);
         }
@@ -66,6 +66,84 @@
             font-size: 20px;
             color: white;
         }
+
+        .catalogoRemate-main .catalogo .article2 a {
+            max-width: 300px;
+            margin: 20px;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .catalogoRemate-main .catalogo .article2 a .selfcard {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: none;
+            align-items: none;
+            width: 300px;
+            height: 350px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 4px black;
+            transition: all 160ms ease-in-out;
+            overflow: hidden;
+        }
+
+        .catalogoRemate-main .catalogo .article2 a .selfcard .cardImg {
+            width: 100%;
+            height: 60%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .catalogoRemate-main .catalogo .article2 a .selfcard .cardTxt {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: start;
+            width: 100%;
+            height: 40%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .catalogoRemate-main .catalogo .article2 a .selfcard .cardTxt h3 {
+            font-size: 24px;
+        }
+
+        .catalogoRemate-main .catalogo .article2 a .selfcard .cardTxt p {
+            font-size: 18px;
+        }
+
+        .catalogoRemate-main .catalogo .article2 a .selfcard:hover {
+            transform: scale(1.02, 1.02);
+        }
+
+        .catalogoRemate-main .catalogo .article2 .l1 {
+            background-image: url(assets/images/lote1.jpg);
+        }
+
+        .catalogoRemate-main .catalogo .article2 .l2 {
+            background-image: url(assets/images/lote2.jpg);
+        }
+
+        .catalogoRemate-main .catalogo .article2 .l3 {
+            background-image: url(assets/images/lote3.jpg);
+        }
+
+        .catalogoRemate-main .catalogo .article2 .l4 {
+            background-image: url(assets/images/lote4.jpg);
+        }
+
+        .catalogoRemate-main .catalogo .article2 .l5 {
+            background-image: url(assets/images/lote5.jpg);
+        }
+
+        .catalogoRemate-main .catalogo .article2 .l6 {
+            background-image: url(assets/images/lote6.jpg);
+        }
     </style>
 </head>
 
@@ -98,7 +176,7 @@
     <main class="catalogoRemate-main">
         <section class="catalogo">
             <article class="article1">
-                <a class="cardLink" href="#">
+                <a id="l1" class="cardLink" href="#">
                     <div class="selfcard">
                         <div class="cardImg l1"></div>
                         <div class="cardTxt">
@@ -108,7 +186,7 @@
                     </div>
                 </a>
 
-                <a class="cardLink" href="#">
+                <a id="l2" class="cardLink" href="#">
                     <div class="selfcard">
                         <div class="cardImg l2"></div>
                         <div class="cardTxt">
@@ -118,7 +196,7 @@
                     </div>
                 </a>
 
-                <a class="cardLink" href="#">
+                <a id="l3" class="cardLink" href="#">
                     <div class="selfcard">
                         <div class="cardImg l3"></div>
                         <div class="cardTxt">
@@ -128,7 +206,7 @@
                     </div>
                 </a>
 
-                <a class="cardLink" href="#">
+                <a id="l4" class="cardLink" href="#">
                     <div class="selfcard">
                         <div class="cardImg l4"></div>
                         <div class="cardTxt">
@@ -138,7 +216,7 @@
                     </div>
                 </a>
 
-                <a class="cardLink" href="#">
+                <a id="l5" class="cardLink" href="#">
                     <div class="selfcard">
                         <div class="cardImg l5"></div>
                         <div class="cardTxt">
@@ -148,7 +226,7 @@
                     </div>
                 </a>
 
-                <a class="cardLink" href="#">
+                <a id="l6" class="cardLink" href="#">
                     <div class="selfcard">
                         <div class="cardImg l6"></div>
                         <div class="cardTxt">
@@ -164,11 +242,15 @@
                     <h1>Carrito de compras</h1>
                 </div>
 
-                <h2>El carrito esta vacio! Todavia no se han agregado lotes.</h2>
+                <p id="message">El carrito esta vacio! Todavia no se han agregado lotes.</p>
 
                 <div id="container"></div>
 
-                <button id="updateBtn">Actualizar carrito</button>
+                <div id="buttons">
+                    <button id="updateBtn">Actualizar carrito</button>
+                    <button id="clearBtn">Vaciar carrito</button>
+
+                </div>
             </article>
         </section>
     </main>
@@ -209,7 +291,7 @@
                 : 'fa-solid fa-bars'
         }
     </script>
-    <script src="js/carrito.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
