@@ -21,6 +21,8 @@ document.querySelector('#clearBtn').addEventListener('click', function limpiar()
         confirmButtonColor: '#a5dc86',
         cancelButtonText: 'Cancelar',
         cancelButtonColor: '#f27474',
+        background: '#333841',
+        color: '#ffffff',
 
     }).then((result) => {
         if (result.isConfirmed) {
@@ -33,7 +35,9 @@ document.querySelector('#clearBtn').addEventListener('click', function limpiar()
                 title: 'El carrito fue vaciado!',
                 icon: 'success',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 1500,
+                background: '#333841',
+                color: '#ffffff',
             })
         }
     });
@@ -63,6 +67,8 @@ function agregar(element) {
         confirmButtonColor: '#a5dc86',
         cancelButtonText: 'Cancelar',
         cancelButtonColor: '#f27474',
+        background: '#333841',
+        color: '#ffffff',
     }).then((result) => {
 
         if (result.isConfirmed) {
@@ -75,7 +81,9 @@ function agregar(element) {
                     title: 'El Lote ya se encuentra en el carrito!',
                     icon: 'error',
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 1500,
+                    background: '#333841',
+                    color: '#ffffff',
                 })
             }
         }
